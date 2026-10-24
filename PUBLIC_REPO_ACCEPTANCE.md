@@ -126,20 +126,22 @@ Exit rule:
 
 ## 1. tof_container_pulse
 
-Overall: IN ACCEPTANCE
+Overall: **ACCEPTED**
 
 | ID | Status | Evidence / note |
 | --- | --- | --- |
-| R1 | PASS | README and START_HERE now provide direct purpose and first-run path |
-| R2 | TODO | Fresh-user path still to be accepted explicitly |
-| R3 | PASS | START_HERE describes six generated HTML pages and success state |
-| R4 | PASS | one-shot and watch workflows documented |
-| R5 | TODO | verify failure guidance from a fresh-user perspective |
-| R6 | PASS | read-only boundary and screenshot/privacy warning documented |
-| R7 | PASS | CI and cross-platform smoke green on current main |
-| R8 | TODO | final command/platform/doc consistency check |
+| R1 | PASS | README and START_HERE provide direct purpose, audience, requirements and first-run path |
+| R2 | PASS | DEV proof: cross-platform smoke executes the real `run.py --once --no-open` generation path on Linux/macOS/Windows; OS start wrappers are thin direct launchers into the same runtime path |
+| R3 | PASS | START_HERE describes all six generated HTML pages and the visible success state |
+| R4 | PASS | one-shot and watch workflows match `run.py`; stop for watch mode is documented as Ctrl+C |
+| R5 | PASS | START_HERE now gives an explicit first-failure path through `scripts/smoke_check.py` and explains the first useful error |
+| R6 | PASS | read-only boundary, private infrastructure warning and SECURITY.md are aligned |
+| R7 | PASS | existing valid proof reused: unit CI and cross-platform smoke passed before the documentation-only troubleshooting update |
+| R8 | PASS | final source/doc check: Python 3.10+ claim matches Ruff target; six-page names, start commands, watch behavior, platform support and generated outputs match implementation |
 
-Open P0/P1: none known.
+Open P0/P1: none.
+
+Acceptance note: host-specific deep signal availability is intentionally outside this DEV acceptance. The suite is accepted when unavailable signals degrade to unknown/N/A rather than crashing, as defined by the product contract.
 
 ## 2. tof_local_knowledge
 
