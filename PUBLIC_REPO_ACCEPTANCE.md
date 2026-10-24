@@ -270,15 +270,39 @@ Open P0/P1: none.
 
 ## 8. tof-legacy-recovery-workbench
 
-Overall: QUEUED
+Overall: **ACCEPTED**
 
-D1–D5: TODO. Runnable-path checks are only added if we explicitly choose to accept it as a runnable tool rather than only as a method surface.
+| ID | Status | Evidence / note |
+| --- | --- | --- |
+| D1 | PASS | README/START_HERE identify a recovery/transition method tool, not runtime truth or a silent release path |
+| D2 | PASS | START_HERE gives the ordered recovery pipeline plus explicit Linux/macOS and Windows PowerShell first-run commands |
+| D3 | PASS | evidence, hypotheses, extracts, mappings, review and runtime truth remain explicitly separated |
+| D4 | PASS | SECURITY.md forbids private runtime exports, credentials, customer/personal data, private hosts/paths and confidential logs/repos |
+| D5 | PASS | next step to bridge-planning and links back to showcase/V7 are clear |
+
+Open P0/P1: none.
+
+Existing proof reused: CI run 3 passed pytest and Docker image build before the documentation-only platform-start clarification.
+
+Acceptance fix: replaced the Unix-only-looking first-run snippet with explicit Linux/macOS and Windows PowerShell instructions.
 
 ## 9. tof-bridge-planning-method
 
-Overall: QUEUED
+Overall: **ACCEPTED**
 
-D1–D5: TODO. Runnable-path checks are only added if we explicitly choose to accept it as a runnable tool rather than only as a method surface.
+| ID | Status | Evidence / note |
+| --- | --- | --- |
+| D1 | PASS | README/START_HERE identify a planning method tool, not a runtime deployment system |
+| D2 | PASS | START_HERE gives the prepared-block → sketch → candidate → report path plus explicit Linux/macOS and Windows PowerShell first-run commands |
+| D3 | PASS | candidates remain planning objects; no automatic acceptance, implementation or release is implied |
+| D4 | PASS | SECURITY.md forbids secrets, customer/personal data, private hosts/IPs, production IDs, internal service maps and private runtime config |
+| D5 | PASS | recovery-before-planning and broader showcase/V7 context are clearly linked |
+
+Open P0/P1: none.
+
+Existing proof reused: CI run 3 passed pytest and Docker image build before the documentation-only platform-start clarification.
+
+Acceptance fix: replaced the Unix-only-looking first-run snippet with explicit Linux/macOS and Windows PowerShell instructions.
 
 ## 10. tof-systems-website
 
