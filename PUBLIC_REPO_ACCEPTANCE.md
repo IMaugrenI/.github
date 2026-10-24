@@ -306,6 +306,19 @@ Acceptance fix: replaced the Unix-only-looking first-run snippet with explicit L
 
 ## 10. tof-systems-website
 
-Overall: QUEUED
+Overall: **STAGING ACCEPTED**
 
-W1–W8: TODO. Public launch acceptance remains separate.
+| ID | Status | Evidence / note |
+| --- | --- | --- |
+| W1 | PASS | existing targeted DEV proof reused: Linux/macOS background start, duplicate-start protection, status, HTTP reachability and clean stop passed; README/START_HERE match the scripts and bind only to 127.0.0.1:8080 |
+| W2 | PASS | all six HTML files have valid internal asset/page links; homepage links to DFA/DLA/legal/contact surfaces and product pages retain coherent navigation |
+| W3 | PASS | main pages have viewport, one H1, skip link, semantic main/nav structure, ARIA-controlled mobile menu, focus styles, responsive media queries and reduced-motion support; 404 is a minimal exception without normal navigation |
+| W4 | PASS | V3.4 copy matches the approved DFA/DLA product state: DFA operational workspace/setup/knowledge/channels/roles/security; DLA local chat/system/projects/files/work-state/personal-memory boundaries |
+| W5 | PASS | impressum.html and datenschutz.html visibly remain TESTSTAND with explicit missing operator/contact/controller fields and no invented legal data |
+| W6 | PASS | every HTML file has meta noindex/nofollow; _headers adds X-Robots-Tag noindex/nofollow; robots.txt disallows all crawling |
+| W7 | PASS | README, START_HERE and privacy placeholder are hosting-neutral and explicitly state that the final hosting provider is undecided |
+| W8 | PASS | README and legal pages explicitly block public launch until operator/contact/privacy/hosting details are finalized; DFA webchat is not treated as a launch prerequisite |
+
+Open P0/P1 for staging: none.
+
+Staging acceptance note: **STAGING ACCEPTED is not PUBLIC-LAUNCH ACCEPTED.** Public launch remains blocked until the actual operator/imprint/contact data, final hosting configuration and final privacy wording are known, followed by the separate launch check and explicit removal of noindex/robots blocking.
