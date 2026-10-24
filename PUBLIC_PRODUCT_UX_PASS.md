@@ -36,7 +36,7 @@ Overall: **UX PASS V1 COMPLETE**
 
 ## tof_local_knowledge
 
-Overall: **UX PASS IN FINAL CHECK**
+Overall: **UX PASS V1 COMPLETE**
 
 | ID | Status | Evidence |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ Overall: **UX PASS IN FINAL CHECK**
 | U2 | PASS | Main experience is framed as asking/searching your documents; API/runtime/grounded-answer terminology is removed from normal copy |
 | U3 | PASS | The primary action is asking a question; direct document search is the secondary task |
 | U4 | PASS | setup, system controls, technical docs and log are grouped under “Setup & technical details” |
-| U5 | PENDING | visual redesign passed in run 43; a final metadata-only human-language cleanup triggered CI run 44, currently running |
+| U5 | PASS | current main CI run 44 passed after the final human-language cleanup |
 
 ## local_case_organizer
 
