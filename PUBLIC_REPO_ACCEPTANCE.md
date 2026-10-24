@@ -228,21 +228,45 @@ Acceptance note: malware scanning, encryption-at-rest and legal/evidentiary guar
 
 ## 5. tof-showcase
 
-Overall: QUEUED
+Overall: **ACCEPTED**
 
-D1–D5: TODO.
+| ID | Status | Evidence / note |
+| --- | --- | --- |
+| D1 | PASS | README/START_HERE state clearly that this is a public architecture map, not an application |
+| D2 | PASS | five-minute reading path is explicit and all linked internal documents exist |
+| D3 | PASS | public framing is explicitly separated from private runtime/operative truth |
+| D4 | PASS | repository requires no private data, secrets or runtime details |
+| D5 | PASS | goal-based links route readers to the four runnable products or the stricter V7 frame without circular ambiguity |
+
+Open P0/P1: none.
 
 ## 6. tof-v7-public-frame
 
-Overall: QUEUED
+Overall: **ACCEPTED**
 
-D1–D5: TODO.
+| ID | Status | Evidence / note |
+| --- | --- | --- |
+| D1 | PASS | START_HERE states this is a public boundary document and not a runnable product |
+| D2 | PASS | ordered six-document reading path is complete and all targets exist |
+| D3 | PASS | runtime, canon, archive, Werkbank, planning and public explanation are explicitly non-interchangeable |
+| D4 | PASS | public guardrail framing avoids production/operator detail requirements |
+| D5 | PASS | readers are directed back to tof-showcase for broad context and to runnable repos for code/behavior |
+
+Open P0/P1: none.
 
 ## 7. tof-module-ideas
 
-Overall: QUEUED
+Overall: **ACCEPTED**
 
-D1–D5: TODO.
+| ID | Status | Evidence / note |
+| --- | --- | --- |
+| D1 | PASS | README/START_HERE clearly identify a structured idea/candidate space with nothing to install |
+| D2 | PASS | scope → template → chain positioning → example → indexes gives a direct usage path |
+| D3 | PASS | candidates are explicitly proposals, not release promises or runtime truth |
+| D4 | PASS | START_HERE and public boundary prohibit secrets, production IDs, internal hostnames and private service maps |
+| D5 | PASS | broader architecture, recovery, bridge-planning and V7 next steps are clearly linked |
+
+Open P0/P1: none.
 
 ## 8. tof-legacy-recovery-workbench
 
