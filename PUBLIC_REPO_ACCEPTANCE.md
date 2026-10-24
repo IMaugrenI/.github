@@ -171,9 +171,31 @@ Acceptance note: deep runtime behavior on every possible user host is outside DE
 
 ## 3. tof_local_builder
 
-Overall: QUEUED
+Overall: **ACCEPTED**
 
-R1–R8: TODO, except existing green CI and repo-bridge boundary tests may be reused.
+| ID | Status | Evidence / note |
+| --- | --- | --- |
+| R1 | PASS | README and START_HERE explain product purpose, audience, requirements, first-run wizard, Open WebUI and source/sandbox model |
+| R2 | PASS | placeholder/invalid source paths force the first-run wizard before Docker start; tests cover placeholder rejection and completed setup; CI validates `compose.yml` with a real source path override |
+| R3 | PASS | START_HERE defines visible success: services up, WebUI reachable, repo bridge reachable, selected model present and source/sandbox configured |
+| R4 | PASS | setup/up/check/status/ui/down paths match the Python CLI; Windows wrappers accept `py` or `python` and fail-fast |
+| R5 | PASS | START_HERE points to `doctor`; doctor reports Docker, source, sandbox and port readiness without requiring internal architecture knowledge |
+| R6 | PASS | normal source is mounted read-only, writes are sandbox-only, published service ports default to loopback, repo-bridge tests reject parent/symlink escapes and source writes; advanced host-reader mode is separately warned and documented |
+| R7 | PASS | current main CI run 6 passed: compile, Compose config validation and pytest including repo-bridge boundary and first-run wizard contract tests |
+| R8 | PASS | browser-open preference is now actually executed by `up`; stale command text was corrected; docs, wizard, runtime commands, source/sandbox paths and ports now match implementation |
+
+Open P0/P1: none.
+
+Acceptance fixes made during review:
+- clarified containerized read-only bridge as normal/default path and host-reader as advanced mode
+- added repo-specific security guidance and path-boundary tests
+- corrected CI test loading
+- made `BUILDER_OPEN_BROWSER=1` actually open Open WebUI or print the manual URL
+- added first-run wizard contract tests and Compose config validation
+- made Windows launchers tolerant of `py` / `python` and fail-fast
+- corrected stale docs claiming `up.sh` wrapped a different start mechanism
+
+Acceptance note: actual model download time and hardware performance vary by user system and are outside DEV acceptance. The accepted contract is that the guided setup, boundary enforcement and diagnostics behave as documented.
 
 ## 4. local_case_organizer
 
