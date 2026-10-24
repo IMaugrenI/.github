@@ -36,7 +36,7 @@ Overall: **UX PASS V1 COMPLETE**
 
 ## tof_local_knowledge
 
-Overall: **UX PASS V1 COMPLETE**
+Overall: **UX PASS IN FINAL CHECK**
 
 | ID | Status | Evidence |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ Overall: **UX PASS V1 COMPLETE**
 | U2 | PASS | Main experience is framed as asking/searching your documents; API/runtime/grounded-answer terminology is removed from normal copy |
 | U3 | PASS | The primary action is asking a question; direct document search is the secondary task |
 | U4 | PASS | setup, system controls, technical docs and log are grouped under “Setup & technical details” |
-| U5 | PASS | current main CI run 43 passed after the UX redesign |
+| U5 | PENDING | visual redesign passed in run 43; a final metadata-only human-language cleanup triggered CI run 44, currently running |
 
 ## local_case_organizer
 
@@ -60,7 +60,7 @@ Overall: **UX PASS V1 COMPLETE**
 
 ## tof_container_pulse
 
-Overall: **UX PASS IN FINAL CHECK**
+Overall: **UX PASS V1 COMPLETE**
 
 | ID | Status | Evidence |
 | --- | --- | --- |
@@ -68,6 +68,6 @@ Overall: **UX PASS IN FINAL CHECK**
 | U2 | PASS | primary copy now describes what is running, what needs attention and what the user can look at; collector/CLI/auto-fix language was removed from the normal surface |
 | U3 | PASS | page headings and status wording prioritize attention/recommendation rather than implementation detail |
 | U4 | PASS | remaining technical values are domain data (container names, ports, measurements); platform badges are humanized |
-| U5 | PENDING | current CI and cross-platform Pulse Suite smoke are running |
+| U5 | PASS | current main CI run 80 and cross-platform Pulse Suite smoke run 18 both passed after the UX changes |
 
-Open UX-blocking P0/P1: none known.
+Open UX-blocking P0/P1: none.
