@@ -145,9 +145,29 @@ Acceptance note: host-specific deep signal availability is intentionally outside
 
 ## 2. tof_local_knowledge
 
-Overall: QUEUED
+Overall: **ACCEPTED**
 
-R1–R8: TODO, except existing evidence may be reused during acceptance.
+| ID | Status | Evidence / note |
+| --- | --- | --- |
+| R1 | PASS | README and START_HERE explain purpose, audience, prerequisites, safe demo-first use and first action in English/German |
+| R2 | PASS | Fresh-clone default now uses the bundled synthetic `./demo/source_1`; existing public demo evidence proves the real scan → extract → search → grounded-answer chain; current CI validates `.env.example` + `compose.full.yml` configuration |
+| R3 | PASS | START_HERE and demo docs define visible success: healthy services, indexed demo source, search evidence, citations and explicit no-evidence behavior |
+| R4 | PASS | setup/up/check/status/ui/down commands and OS wrappers match the Python CLI; Windows wrappers now accept `py` or `python` and stop on the first failed startup step |
+| R5 | PASS | beginner guide and START_HERE point to `doctor`; runtime commands report Docker, source-root and port readiness without requiring internal architecture knowledge |
+| R6 | PASS | source mount is read-only; private-data/screenshot rules are documented; all Docker-published ports now default to loopback through `BIND_HOST=127.0.0.1`; a test guards the local-bind default |
+| R7 | PASS | current main CI run 42 passed: dependency install, compile, Docker Compose config validation and pytest; QA fallback, local bind and fresh-demo defaults are covered |
+| R8 | PASS | final source/doc check aligns Python 3.11+, UI port 8785, service ports, Postgres 55432 host default, optional Ollama/Open WebUI profiles, demo source path and runtime commands |
+
+Open P0/P1: none.
+
+Acceptance fixes made during review:
+- CI test import/dependency path corrected
+- Docker service exposure changed from all host interfaces to loopback by default
+- fresh-clone source changed from a host-specific `/srv/...` path to bundled synthetic demo data
+- Windows launchers made tolerant of `py`/ `python` and fail-fast
+- stale pre-merge branch instruction removed from the demo guide
+
+Acceptance note: deep runtime behavior on every possible user host is outside DEV acceptance. The existing neutral local demo evidence is reused; current configuration/test proof covers the changes made during this acceptance.
 
 ## 3. tof_local_builder
 
