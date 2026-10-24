@@ -2,6 +2,16 @@
 
 Local-first tooling and method repositories for inspectable systems, clear boundaries, and small public building blocks.
 
+## Start by goal
+
+- Want a light runnable example? Start with **[`tof_container_pulse`](https://github.com/IMaugrenI/tof_container_pulse)**.
+- Want evidence-grounded local document search? Use **[`tof_local_knowledge`](https://github.com/IMaugrenI/tof_local_knowledge)**.
+- Want controlled local AI with read-only source and sandboxed output? Use **[`tof_local_builder`](https://github.com/IMaugrenI/tof_local_builder)**.
+- Want to organize sensitive local case files? Use **[`local_case_organizer`](https://github.com/IMaugrenI/local_case_organizer)**.
+- Want the architecture map instead of a runnable tool? Start with **[`tof-showcase`](https://github.com/IMaugrenI/tof-showcase)**.
+
+Each runnable product repository has a `START_HERE.md` for first-time users.
+
 ## Product line
 
 - **Observe** — [`tof_container_pulse`](https://github.com/IMaugrenI/tof_container_pulse): local Docker host status at a glance
