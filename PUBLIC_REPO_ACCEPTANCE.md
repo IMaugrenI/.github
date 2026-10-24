@@ -199,9 +199,32 @@ Acceptance note: actual model download time and hardware performance vary by use
 
 ## 4. local_case_organizer
 
-Overall: QUEUED
+Overall: **ACCEPTED**
 
-R1–R8: TODO, except existing green CI and integrity/export tests may be reused.
+| ID | Status | Evidence / note |
+| --- | --- | --- |
+| R1 | PASS | README and START_HERE explain purpose, audience, requirements, browser UI and import → register → timeline → export flow |
+| R2 | PASS | normal `run.py` path works from the repository without package installation; current CI runs setup/check/status/doctor and UI command parsing from a fresh checkout |
+| R3 | PASS | START_HERE and install guide define visible success: workspace, inbox, local UI, provenance-backed imports and export package |
+| R4 | PASS | setup/ui/check/status/doctor/import/register/timeline/export commands match the CLI and OS launchers; Windows launchers now accept `py` or `python` |
+| R5 | PASS | `doctor` and `status` are documented; doctor checks repo/workspace presence and writeability without requiring architecture knowledge |
+| R6 | PASS | UI defaults to loopback, upload filenames are reduced to basename/inbox, private runtime folders are gitignored, imports reject symlink escapes, exports revalidate root/hash and sanitize absolute source paths |
+| R7 | PASS | current main CI run 7 passed: fresh-clone CLI smoke, compile and pytest including import/export integrity tests |
+| R8 | PASS | final source/doc check aligns Python 3.11+, UI port 8765, foreground UI lifetime, command names, workspace paths and export behavior |
+
+Open P0/P1: none.
+
+Acceptance fixes made during review:
+- unique import batch/file IDs
+- symlink escape protection during import
+- export root and SHA-256 integrity validation
+- sanitized handoff provenance without absolute private source paths
+- export manifest/checksum improvements
+- real pytest execution in CI
+- fresh-clone CLI smoke in CI
+- Windows launchers made tolerant of `py` / `python` and fail-fast
+
+Acceptance note: malware scanning, encryption-at-rest and legal/evidentiary guarantees remain explicitly outside the repository contract.
 
 ## 5. tof-showcase
 
